@@ -1,0 +1,25 @@
+const int led1 = 7;
+const int pot = 0;
+
+int var = 0;
+
+ void setup()
+{
+ pinMode(led1, OUTPUT);
+  
+ Serial.begin(9600);
+}
+ void loop()
+{  
+   
+  var = analogRead(pot);
+  Serial.println(var);
+    
+  if (var > 1){
+  digitalWrite(led1, HIGH);
+  }else{
+  digitalWrite(led1, LOW);
+            
+  delay(200);
+  } 
+}
