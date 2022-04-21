@@ -1,0 +1,30 @@
+const int botao1 = 13;
+const int botao2 = 12;
+
+ void setup()
+{
+ pinMode(botao1, OUTPUT);
+ pinMode(botao2, OUTPUT);
+ Serial.begin(9600);
+   
+}
+
+int valor1;
+int valor2; 
+int analogValue = 0;
+
+ void loop(){ 
+ 
+ analogValue = analogRead(0);
+ valor1 = digitalRead(botao1);
+ valor2 = digitalRead(botao2);
+   
+  if (valor1){
+  Serial.println("MAX 80km");
+    
+  }
+  if (valor2){
+  Serial.println("90km");
+  
+  } 
+}
